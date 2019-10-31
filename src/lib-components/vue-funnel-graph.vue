@@ -28,7 +28,7 @@
             >
                 <div class="label__value">{{ value }}</div>
                 <div class="label__title" v-if="labels">{{ labels[index] }}</div>
-                <div class="label__percentage" v-if="displayPercentage && percentages()[index] !== 100">
+                <div class="label__percentage" v-if="alwaysDisplayPercentage || displayPercentage && percentages()[index] !== 100">
                     {{ percentages()[index] }}%
                 </div>
                 <div class="label__segment-percentages" v-if="is2d()">
@@ -92,6 +92,10 @@
             displayPercentage: {
                 type: Boolean,
                 default: true
+            },
+            alwaysDisplayPercentage: {
+              type: Boolean,
+              default: false
             }
         },
         data() {
@@ -263,6 +267,14 @@
                 this.graph.setDirection(this.direction)
                     .setWidth(this.width)
                     .setHeight(this.height);
+                this.drawPaths();
+            },
+            height() {
+                this.graph.setHeight(this.height);
+                this.drawPaths();
+            },
+            width() {
+                this.graph.setWidth(this.width);
                 this.drawPaths();
             }
         }
