@@ -1,5 +1,10 @@
 # VueFunnelGraph.js
 
+#### DataCamp fork status
+
+2020-10-07: Active use in [enterprise-frontend](https://github.com/datacamp-engineering/enterprise-frontend) — maintained by [ee-eng](https://github.com/orgs/datacamp-engineering/teams/enterprise).
+<hr>
+
 ![npm](https://img.shields.io/npm/v/vue-funnel-graph-js.svg)
 ![GitHub](https://img.shields.io/github/license/greghub/vue-funnel-graph-js.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/greghub/vue-funnel-graph-js.svg)
